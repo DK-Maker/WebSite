@@ -45,11 +45,11 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'dkmaker.xyz',
-        // logo: {
-        //   alt: 'My Site Logo',
-        //   src: 'img/logo.svg',
-        // },
+        // title: 'dkmaker.xyz',
+        logo: {
+          alt: 'dkmaker.xyz',
+          src: 'img/logo.png',
+        },
         items: [
           {
             type: 'doc',
@@ -58,6 +58,12 @@ const config = {
             label: 'Tutorial',
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
+          
+          {
+            href: 'https://www.thingiverse.com/exiof/designs',
+            label: 'Thingiverse',
+            position: 'right',            
+          },
           {
             href: 'https://www.youtube.com/channel/UCjY0W9GSXoe7TPeRzM-Ahzw',
             label: 'YouTube',
