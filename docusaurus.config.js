@@ -17,7 +17,27 @@ const config = {
   organizationName: 'DK-Maker', // Usually your GitHub org/user name.
   projectName: 'WebSite', // Usually your repo name.
   
-
+  plugins: [
+    [
+      'content-docs',
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
+        id: 'mig',
+        path: 'mig',
+        routeBasePath: 'mig',
+        editUrl: ({locale, versionDocsDirPath, docPath}) => {
+          if (locale !== 'en') {
+            return `https://crowdin.com/project/docusaurus-v2/${locale}`;
+          }
+          return `https://github.com/facebook/docusaurus/edit/main/website/${versionDocsDirPath}/${docPath}`;
+        },
+        editCurrentVersion: true,
+        sidebarPath: require.resolve('./sidebars.js'),
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+      }),
+    ]
+  ],
   presets: [
     [
       'classic',
@@ -51,6 +71,12 @@ const config = {
           src: 'img/logo.png',
         },
         items: [
+          {
+            to: '/mig',
+            label: 'Om mig',
+            position: 'left',
+            activeBaseRegex: `/mig`,
+          },
           {
             type: 'doc',
             docId: 'intro',
