@@ -24,8 +24,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title}`}
+      description="DKMaker - alt om 3D print, og andre DYI v&aelig;rkt&oslash;jer<head />">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

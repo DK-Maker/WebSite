@@ -16,6 +16,7 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'DK-Maker', // Usually your GitHub org/user name.
   projectName: 'WebSite', // Usually your repo name.
+  
 
   presets: [
     [
