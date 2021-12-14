@@ -26,13 +26,13 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
+          editUrl: 'https://github.com/dkmaker-xyz/WebSite/edit/main/docs/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/main/website/blog/',
+            'https://github.com/dkmaker-xyz/WebSite/edit/main/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -64,7 +64,7 @@ const config = {
             position: 'right',            
           },
           {
-            href: 'https://github.com/DK-Maker',
+            href: 'https://github.com/dkmaker-xyz',
             label: 'GitHub',
             position: 'right',
           },
