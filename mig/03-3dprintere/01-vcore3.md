@@ -2,5 +2,4 @@
 sidebar_position: 1
 ---
 
-# Hvem er jeg?
-
+# Ratrig V-Core 3
