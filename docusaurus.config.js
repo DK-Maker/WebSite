@@ -25,18 +25,26 @@ const config = {
         id: 'mig',
         path: 'mig',
         routeBasePath: 'mig',
-        editUrl: ({locale, versionDocsDirPath, docPath}) => {
-          if (locale !== 'en') {
-            return `https://crowdin.com/project/docusaurus-v2/${locale}`;
-          }
-          return `https://github.com/facebook/docusaurus/edit/main/website/${versionDocsDirPath}/${docPath}`;
-        },
+        editCurrentVersion: true,
+        sidebarPath: require.resolve('./sidebars.js'),
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+      }),
+    ],
+    [
+      'content-docs',
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
+        id: 'klipper',
+        path: 'klipper',
+        routeBasePath: 'klipper',
         editCurrentVersion: true,
         sidebarPath: require.resolve('./sidebars.js'),
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
       }),
     ]
+
   ],
   presets: [
     [
@@ -48,12 +56,12 @@ const config = {
           // Please change this to your repo.
           editUrl: 'https://github.com/dkmaker-xyz/WebSite/edit/main/docs/',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/dkmaker-xyz/WebSite/edit/main/blog/',
-        },
+        // blog: {
+        //   showReadingTime: true,
+        //   // Please change this to your repo.
+        //   editUrl:
+        //     'https://github.com/dkmaker-xyz/WebSite/edit/main/blog/',
+        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -64,6 +72,10 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: true
+      },
       navbar: {
         // title: 'dkmaker.xyz',
         logo: {
@@ -76,6 +88,12 @@ const config = {
             label: 'Om mig',
             position: 'left',
             activeBaseRegex: `/mig`,
+          },
+          {
+            to: '/klipper',
+            label: 'Klipper',
+            position: 'left',
+            activeBaseRegex: `/klipper`,
           },
           // {
           //   type: 'doc',
