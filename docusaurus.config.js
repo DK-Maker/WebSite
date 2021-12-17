@@ -165,7 +165,7 @@ const config = {
       //   ],
       //   copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       // },
-      footer: {},
+      // footer: {},
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
