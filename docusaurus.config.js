@@ -43,6 +43,19 @@ const config = {
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
       }),
+    ],
+    [
+      'content-docs',
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
+        id: 'designs',
+        path: 'designs',
+        routeBasePath: 'designs',
+        editCurrentVersion: true,
+        sidebarPath: require.resolve('./sidebars.js'),
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+      }),
     ]
 
   ],
@@ -94,6 +107,12 @@ const config = {
             label: 'Klipper',
             position: 'left',
             activeBaseRegex: `/klipper`,
+          },
+          {
+            to: '/designs',
+            label: 'Designs',
+            position: 'left',
+            activeBaseRegex: `/designs`,
           },
           // {
           //   type: 'doc',
