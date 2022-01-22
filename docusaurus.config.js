@@ -19,6 +19,13 @@ const config = {
   
   plugins: [
     [
+      '@docusaurus/plugin-google-analytics',
+      {
+        trackingID: 'G-DZCEXE5XY3',
+        anonymizeIP: false,
+      },
+    ],
+    [
       'content-docs',
       /** @type {import('@docusaurus/plugin-content-docs').Options} */
       ({
