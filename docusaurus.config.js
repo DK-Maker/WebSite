@@ -19,13 +19,6 @@ const config = {
   
   plugins: [
     [
-      '@docusaurus/plugin-google-analytics',
-      {
-        trackingID: 'G-DZCEXE5XY3',
-        anonymizeIP: false,
-      },
-    ],
-    [
       'content-docs',
       /** @type {import('@docusaurus/plugin-content-docs').Options} */
       ({
@@ -68,9 +61,9 @@ const config = {
   ],
   presets: [
     [
-      'classic',
+      '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
@@ -85,7 +78,11 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
+        gtag: {
+          trackingID: 'G-DZCEXE5XY3',
+          anonymizeIP: false,
+        },
+      },
     ],
   ],
 
